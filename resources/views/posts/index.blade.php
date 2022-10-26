@@ -29,10 +29,9 @@
         <h3>Tidak ada data</h3>
         @endif
         </div>
-
+        
     </div>
-
-    <a href="{{route ('posts.create') }}" class="btn btn-primary"> Create   </a>
-
-    
+@auth
+    <a href="{{route ('posts.create') }}" class="btn btn-primary">Create</a>
+@endauth
 @endsection 

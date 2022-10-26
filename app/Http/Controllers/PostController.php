@@ -7,6 +7,11 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
+        public function __construct()
+    {
+    $this->middleware('auth', ["except" => ["index", "show"]]
+);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +24,7 @@ class PostController extends Controller
             'id' => "posts",
             'posts' => Post::orderBy('created_at', 'desc')->paginate(10)
         );
-        return view('template.index', ["title" => "Blog",])->with($data);
+        return view('posts.index', ["title" => "Blog",])->with($data);
     }
 
     /**
@@ -29,7 +34,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('template.create', ["title" => "Create a Post",]);
+        return view('posts.create', ["title" => "Create a Post",]);
     }
 
     /**
@@ -60,7 +65,7 @@ class PostController extends Controller
             'id' => "posts",
             'posts' => Post::find($id)
         );
-        return view('template.show', ["title" => "Post",])->with($data);
+        return view('posts.show', ["title" => "Posts",])->with($data);
     }
 
     /**
@@ -75,7 +80,7 @@ class PostController extends Controller
             'id' => "posts",
             'posts' => Post::find($id)
         );
-        return view('template.edit', ["title" => "Edit Post"])->with($data);
+        return view('posts.edit', ["title" => "Edit Post"])->with($data);
     }
 
     /**

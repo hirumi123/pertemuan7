@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/home', function () {
@@ -29,8 +30,14 @@ Route::get('/education', function () {
     return view('education');
 });
 
-Route::get('/projects', function () {
-    return view('projects');
+Route::get('/project', function () {
+    return view('project');
+});
+Route::get('/posts', function () {
+    return view('posts');
+});
+Route::get('/baru', function () {
+    return view('baru');
 });
 
 Route::get('/halo/{nama?}', function ($nama = 'Anonim') {
@@ -39,3 +46,13 @@ Route::get('/halo/{nama?}', function ($nama = 'Anonim') {
 
 Route::resource('posts',
 'App\Http\Controllers\PostController');
+
+Auth::routes();
+
+Auth::routes([
+    'reset' => false,
+   ]);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
