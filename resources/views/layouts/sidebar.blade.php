@@ -53,6 +53,13 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+                <a href="/send-email" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Email</p>
+                </a>
+              </li>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
