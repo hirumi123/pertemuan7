@@ -45,6 +45,13 @@
                 </a>
               </li>
           <li class="nav-item">
+            <a href="/send-email" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Send Email</p>
+              <span class="right badge badge-danger">New</span>
+            </a>
+          </li>
+          <li class="nav-item">
                 <a href="/baru" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Baru</p>
@@ -52,13 +59,6 @@
                 </a>
               </li>
             </ul>
-          </li>
-          <li class="nav-item">
-                <a href="/send-email" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Email</p>
-                </a>
-              </li>
           </li>
         </ul>
       </nav>
