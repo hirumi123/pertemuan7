@@ -12,6 +12,7 @@
         @if(count($posts)>0)
             @foreach ($posts as $post)
             <div class="well">
+            <img src="{{asset('storage/image/'.$post->picture)}}" style="height: 100px">
                 <h3><a href="/posts/{{$post -> id}} " > {{$post -> title}}</a></h3>
 
                 <small>tanggal:{{$post-> created_at}} </small>                
@@ -29,7 +30,7 @@
         <h3>Tidak ada data</h3>
         @endif
         </div>
-        
+    
     </div>
 @auth
     <a href="{{route ('posts.create') }}" class="btn btn-primary">Create</a>

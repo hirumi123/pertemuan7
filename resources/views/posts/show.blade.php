@@ -4,8 +4,11 @@
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1> {{$posts-> title}} </h1>
+        <img src="{{asset('storage/image/'.$posts->picture)}}"><br>
         <small>tanggal: {{$posts-> created_at}} </small>
+        
         <p>{{$posts-> description}}</p>
+
     </div>
 </div>
 <a href="/posts" class="btn btn-primary">Back</a>
