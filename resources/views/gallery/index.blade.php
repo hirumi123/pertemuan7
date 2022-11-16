@@ -34,7 +34,7 @@
                             @foreach ($galleries as $gallery)
                             <div class="col sm-2">
                                 <div>
-                                    <a class="example-image-link" href="{{asset('storage/posts_image/' .$gallery->picture)}}"
+                                    <a class="example-image-link" href="{{asset('storage/image/' .$gallery->picture)}}"
                                     data-lightbox="example-2" data-title="{{$gallery->description}}">
                                     <img class="example-image img-fluid mb-2"
                                     src = "{{asset('storage/image/' .$gallery->picture)}}" alt="gambar">
