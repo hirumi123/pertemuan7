@@ -29,7 +29,7 @@
     
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -93,3 +93,5 @@
     </div>
 </body>
 </html>
+
+<script src="{{ asset('lightbox2/dist/js/lightbox-plus-jquery.min.js')}}"></script> 
