@@ -38,7 +38,9 @@
                                     data-lightbox="example-2" data-title="{{$gallery->description}}">
                                     <img class="example-image img-fluid mb-2"
                                     src = "{{asset('storage/image/' .$gallery->picture)}}" alt="gambar">
+                                    
                                     </a>
+                                    
                                 </div>
                             </div>
                             @endforeach
@@ -47,7 +49,7 @@
                             @endif
                             <div class="d-flex">
                                 {{ $galleries->links() }}
-
+                                
                             </div>
                         </div>
                     </div>
