@@ -8,7 +8,7 @@
 @endif
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1>Blog Post</h1>
+        <h1>Postingan</h1>
         @if(count($posts)>0)
             @foreach ($posts as $post)
             <div class="well">
@@ -33,6 +33,9 @@
     
     </div>
 @auth
-    <a href="{{route ('posts.create') }}" class="btn btn-primary">Create</a>
+    <div class="container">
+        <a href="{{route ('posts.create') }}" class="btn btn-primary">Create</a>
+    </div>
+    
 @endauth
 @endsection 

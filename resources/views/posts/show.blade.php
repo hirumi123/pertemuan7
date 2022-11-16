@@ -11,6 +11,7 @@
 
     </div>
 </div>
+<div class="container">
 <a href="/posts" class="btn btn-primary">Back</a>
 @auth
 <a href="/posts/{{$posts->id}}/edit" class="btn btn-primary"> Edit</a>
@@ -24,4 +25,6 @@ $posts->id }}">
 <button type="submit" class="btn btn-danger">Delete</button>
 </form>
 @endauth
+</div>
+
 @endsection
