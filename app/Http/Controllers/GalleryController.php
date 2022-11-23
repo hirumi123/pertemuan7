@@ -8,12 +8,28 @@ use App\Models\Post;
 class GalleryController extends Controller
 {
 
-    
+
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    /**
+    * @OA\Get(
+    * path="/api/gallery",
+    * tags={"gallery"},
+    * summary="Returns a Sample API response",
+    * description="A sample greeting to test out the API",
+    * operationId="gallery",
+    
+    * @OA\Response(
+    * response="default",
+    * description="successful operation"
+    * )
+    * )
+    */
+
     public function index()
     {
      $data = array(

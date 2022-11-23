@@ -61,6 +61,13 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="/api/gallery" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Gallery 2</p>
+              <span class="right badge badge-danger">New</span>
+            </a>
+          </li>
+          <li class="nav-item">
                 <a href="/baru" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Baru</p>
