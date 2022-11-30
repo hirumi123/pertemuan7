@@ -20,6 +20,7 @@
         "boostrap": "^2.0.0",
         "bootstrap": "^5.2.1",
         "sass": "^1.54.9",
-        "sass-loader": "^13.0.2"
+        "sass-loader": "^13.0.2",
+        "vercel": "^28.6.0"
     }
 }
