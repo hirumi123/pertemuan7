@@ -1,7 +1,7 @@
 {
     "version": 2,
     "functions": {
-        "api/index.php": { "runtime": "vercel@0.5.2" }
+        "api/index.php": { "runtime": "php-vercel@0.5.2" }
     },
     "routes": [{
         "src": "/(.*)",
@@ -9,7 +9,7 @@
     }],
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "false",
+        "APP_DEBUG": "true",
         "APP_URL": "ppw2-adiyatma.vercel.app",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
