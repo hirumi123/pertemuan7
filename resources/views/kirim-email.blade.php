@@ -1,4 +1,5 @@
-@include('layouts.app')
+@include('layouts.app',["title" => "Send Email",])
+
 
 <div class="container">
     <div class="card-body">
@@ -6,7 +7,7 @@
 
             <div class="col-md-6">
                 @if (session('status'))
-                    <div class="alert alert-primary" role="alert">
+                    <div class="alert alert-primary" role="alert">      
                         {{session('status')}}
                     </div>
                 @endif       

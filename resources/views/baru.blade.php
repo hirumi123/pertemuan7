@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.main',["title" => "Mystery Page",])
 
 @section('content')
 
@@ -11,7 +11,7 @@
                 <hr class="line">
                 @endguest
                 @auth
-                <img src="{{asset("assets\aizen.jpg")}}" class="align-items-center" alt="">
+                <img src="{{asset("assets\aizen.jpg")}}" class="align-items-center d-flex" alt="">
                 
                 @endauth
                 </div>
