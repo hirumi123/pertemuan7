@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
 
@@ -11,16 +11,12 @@
 </style>
     <div class="container">
         <div class="col sm-6">
-            <h1 class="m-0"> {{$menu}} </h1>
-            <ul class="breadcumb float-sm">
-                <li class="breadcumb-item"><a href="#">Home</a></li>
-                <li class="breadcumb-item active"><a href="#">{{$menu}} </a></li>
-            </ul>
+            <h1 class="text-center">Gallery</h1>
         </div>
     </div>
 
 
-<div class="content">
+<div class="content mt-5">
     <div class="container">
         <div class="row">
             <div class="col-12">

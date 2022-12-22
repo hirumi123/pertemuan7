@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -73,6 +73,13 @@
                                     </a>
                                 @endif
                             </div>
+                        </div>
+
+                        <div class="row mb-0">
+                            <div class="col-md-12">
+                                <a href="{{ route('register') }}">Register</a>
+                        </div>
+
                         </div>
                     </form>
                 </div>

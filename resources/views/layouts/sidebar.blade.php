@@ -16,15 +16,23 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-
+          </li>
+          @guest
+          <li class="nav-item menu-open">
+            <a href="/login" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Login</p>  
+            </a>
+          </li>
+          @endguest
               <li class="nav-item">
-                <a href="/about" class="nav-link">
+                <a href="/about" class="nav-link" target="_blank">
                   <i class="far fa-circle nav-icon"></i>
                   <p>About</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/education" class="nav-link">
+                <a href="/education" class="nav-link" target="_blank">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Education</p>
                 </a>
@@ -32,48 +40,50 @@
 
           </li>
           <li class="nav-item">
-            <a href="/project" class="nav-link">
+            <a href="/project" class="nav-link" target="_blank">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Project
-
+                Projects
               </p>
             </a>
           </li>
           <li class="nav-item">
-                <a href="/posts" class="nav-link">
+                <a href="/posts" class="nav-link" target="_blank">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Posts</p>
                 </a>
               </li>
           <li class="nav-item">
-            <a href="/send-email" class="nav-link">
+            <a href="/send-email" class="nav-link" target="_blank">
               <i class="far fa-circle nav-icon"></i>
               <p>Send Email</p>
-              <span class="right badge badge-danger">New</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="/gallery" class="nav-link">
+            <a href="/gallery" class="nav-link" target="_blank">
               <i class="far fa-circle nav-icon"></i>
               <p>Gallery</p>
               <span class="right badge badge-danger">New</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="/api/gallery" class="nav-link">
+            <a href="/api/gallery" class="nav-link" target="_blank">
               <i class="far fa-circle nav-icon"></i>
               <p>Gallery 2</p>
               <span class="right badge badge-danger">New</span>
             </a>
           </li>
+
           <li class="nav-item">
-                <a href="/baru" class="nav-link">
+                <a href="/baru" class="nav-link" target="_blank">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Baru</p>
                   <span class="right badge badge-danger">New</span>
                 </a>
               </li>
+            </ul>
+          </li>
+
             </ul>
           </li>
         </ul>

@@ -10,8 +10,10 @@
                         {{session('status')}}
                     </div>
                 @endif       
+                    <div class="card mt-3">
                     <div class="card-body md-6">
-                    <kbd class="md-2">Tutorial Queue Laravel</kbd>
+                    <h3 class="md-2">Kirim email</h3>
+                    <hr class="line">
                         <form action="{{ route('post-email') }}" method="POST">
                             @csrf
                             <div class="form-group">
@@ -36,6 +38,8 @@
 
                 
             </div>
+                    </div>
+                    
         </div>
     </div>
 </div>

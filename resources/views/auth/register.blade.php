@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('lte/dist/css/adminlte.min.css')}}">
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -76,6 +77,10 @@
                                     {{ __('Register') }}
                                 </button>
                             </div>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-md-12">
+                                <a href="{{ route('login') }}">Login</a>
                         </div>
                     </form>
                 </div>
