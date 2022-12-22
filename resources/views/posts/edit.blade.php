@@ -7,7 +7,7 @@
         <h1>Edit Post</h1>
         
 
-    <form action="{{route('posts.update', $posts -> id)}}" method="POST">
+    <form action="{{route('posts.update', $posts -> id)}}" enctype="multipart/form-data" method="POST">
     @method('PUT')
     
     {{ csrf_field() }}
@@ -23,6 +23,16 @@
 
     </div>
     <input type="hidden" name="id" value="{{$posts -> $id}}"><br>
+    <div class="form-group">
+            <label for="input-file">File Input</label>
+            <div class="input-group">
+                <div class="custom-file border border-secondary rounded">
+                    <input type="file" class="custom-file-input" id="input-file" name="picture">
+                    <label class="custom-file-label" for="input-file">Choose File</label>
+                </div>
+            </div>
+            </div>
+
     <button type="submit" class="btn btn-primary">Submit</button>
 
     </form>

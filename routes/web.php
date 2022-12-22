@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Auth\LoginController;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendEmail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/home', function () {
@@ -29,8 +31,14 @@ Route::get('/education', function () {
     return view('education');
 });
 
-Route::get('/projects', function () {
-    return view('projects');
+Route::get('/project', function () {
+    return view('project');
+});
+Route::get('/posts', function () {
+    return view('posts');
+});
+Route::get('/baru', function () {
+    return view('baru');
 });
 
 Route::get('/halo/{nama?}', function ($nama = 'Anonim') {
@@ -39,3 +47,31 @@ Route::get('/halo/{nama?}', function ($nama = 'Anonim') {
 
 Route::resource('posts',
 'App\Http\Controllers\PostController');
+
+Auth::routes();
+
+Auth::routes([
+    'reset' => false,
+   ]);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::resource('gallery', 'App\Http\Controllers\GalleryController');
+
+
+
+Route::get('/send-email',function(){
+ $data = [
+ 'name' => 'Adiyatma Hilmy',
+ 'body' => 'Testing Kirim Email'
+ ];
+
+ Mail::to('adiyatmahilmy2812@gmail.com')->send(new SendEmail($data));
+
+ dd("Email Berhasil dikirim.");
+});
+
+Route::get('/send-email', [App\Http\Controllers\SendEmailController::class, 'index'])->name('kirim-email');
+Route::post('/post-email', [App\Http\Controllers\SendEmailController::class, 'store'])->name('post-email');

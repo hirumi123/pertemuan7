@@ -1,0 +1,24 @@
+@media only screen and (min-width: 767px) {
+    #kecil {
+        display: none;
+    }
+    
+    
+    
+
+}
+@media only screen and (max-width: 768px) {
+    #kecil {
+        display: flex;
+    }
+
+    #sidebar {
+        display: none;
+    }
+    
+}
+
+#logo {
+    width: 30px;
+    height: 30px;
+}

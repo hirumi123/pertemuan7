@@ -1,1 +1,8 @@
 @import '~bootstrap';
+
+@media only screen and (max-width: 767px) {
+    #kecil {
+        display: none;
+    }
+    
+}
